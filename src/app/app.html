@@ -1,50 +1,76 @@
-<a id="top-page"></a>
-<header class="text-gray-600 body-font">
-  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-      </svg>
-      <span class="ml-3 text-xl">Portfolio</span>
+<header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/90 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-4">
+    <a href="#top-page" class="flex items-center gap-3 font-semibold text-slate-950" aria-label="Retour en haut de page">
+      <span class="grid h-10 w-10 place-items-center rounded-2xl bg-indigo-600 text-white shadow-lg shadow-indigo-600/20">GD</span>
+      <span>Geoffroy Daumer</span>
     </a>
-    <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-      <a class="mr-5 hover:text-gray-900" href="#presentation">Présentation</a>
-      <a class="mr-5 hover:text-gray-900" href="#projets" (click)="Projects()">Projets</a>
-      <a class="mr-5 hover:text-gray-900" href="#formations">Formations</a>
-      <a class="mr-5 hover:text-gray-900" 
-      href="files/CV.pdf"
-      target="_blank"
-      download="Geoffroy_CV.pdf">Télécharger le CV</a>
-      <a class="mr-5 hover:text-gray-900">Contact</a>
+
+    <nav class="flex flex-wrap items-center gap-4 text-sm font-medium text-slate-600" aria-label="Navigation principale">
+      <a class="transition hover:text-indigo-600" href="#presentation">Profil</a>
+      <a class="transition hover:text-indigo-600" href="#projets">Projets</a>
+      <a class="transition hover:text-indigo-600" href="#formations">Formation</a>
+      <a class="transition hover:text-indigo-600" href="files/CV.pdf" target="_blank" download="Geoffroy_Daumer_CV.pdf">CV</a>
+      <a class="rounded-full bg-slate-950 px-4 py-2 text-white shadow-sm transition hover:bg-indigo-700" href="mailto:geoffroy.daumer@outlook.fr">Contact</a>
     </nav>
   </div>
 </header>
-<a id="presentation"></a>
-<section class="flex">
-  <div class="ml-10 mt-20 mr-10 flex flex-wrap">
-    <div>
-      <p>Geoffroy  Daumer</p>
-      <p>Je suis un développeur web Java / Angular passionné par mon métier. 
-        Je suis arrivé dans le monde du développement en 2022, avec une formation "développeur en IA" par l'école Simplon x Isen.
-        Après avoir validé cette formation, j'ai décidé de m'orienter vers quelque chose de plus général, pour avoir de bonnes bases de programmation et avoir de bons débouchés : La formation développeur full-stack Java / Angular par l'école Openclassrooms.
-        Je suis arrivé au terme de cette formation, à force de travail acharné, c'est une vraie fierté. Je m'occupe maintenant à parfaire mon savoir et à rendre mon profil attractif, pour trouver un emploi.
-        Mon rêve est de m'investir profondément dans la musique : création, guitare, piano, synthé, chant, et pour cela, je souhaite gagner ma vie grâce à ce domaine que j'aime qu'est l'informatique.
-        
-        , au cours de laquelle j'ai appris à entraîner et à mettre en production des algorithmes d'intelligence artificielle, j'ai également beaucoup fait de veille technique dans cette formation, nous avons également abordé les bases de données, le cloud, les API, tout cela en Python. 
-        J'ai eu la joie de trouver mon premier client pendant cette période, auquel j'ai été challengé pour réaliser une application qui upload rapidement des musiques sur un site de vente de musique, ce fut une fierté personnelle.
-        À l'issue de cette formation, j'ai enchaîné avec une formation de développeur full-stack Java / Angular, où j'ai appris à développer les applications web. Cette formation a été très challengeante pour moi, j'ai appris à coder en Java et en Javascript, je maîtrise maintenant Java Spring Boot avec Maven pour le côté back, et Angular pour le côté front.
-        Cette formation m'a également formé sur les tests (unitaires, d'intégration, end to end).
 
-      </p>
+<main id="top-page">
+  <section id="presentation" class="relative overflow-hidden bg-slate-950 text-white">
+    <div class="absolute inset-0 opacity-30" aria-hidden="true">
+      <div class="absolute left-10 top-20 h-72 w-72 rounded-full bg-indigo-500 blur-3xl"></div>
+      <div class="absolute bottom-0 right-16 h-80 w-80 rounded-full bg-cyan-400 blur-3xl"></div>
     </div>
-  </div>
-</section>
-<section>
-  <a id="projets"></a>
-  <div [ngClass]="{'block': ProjectsActive, 'hidden': !ProjectsActive}">
-    <app-projets></app-projets>
-  </div>
-  
-  <a id="formations"></a>
+
+    <div class="relative mx-auto grid max-w-6xl gap-12 px-5 py-24 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+      <div>
+        <p class="mb-4 inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm text-indigo-100">
+          Full-stack engineer · AI automation · deployment-ready products
+        </p>
+        <h1 class="max-w-4xl text-4xl font-black tracking-tight sm:text-6xl">
+          I build reliable web applications and AI-powered automations that turn ideas into shipped products.
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+          Developer focused on Java/Spring Boot, Angular, Python, and automation. I combine clean architecture, pragmatic testing, and deployment discipline to deliver tools that solve concrete business problems.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a class="rounded-full bg-white px-6 py-3 font-semibold text-slate-950 shadow-xl shadow-black/20 transition hover:-translate-y-0.5 hover:bg-indigo-50" href="#projets">
+            View featured work
+          </a>
+          <a class="rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:border-white/50" href="https://github.com/gdaume24" target="_blank" rel="noopener noreferrer">
+            GitHub profile
+          </a>
+          <a class="rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:border-white/50" href="https://www.linkedin.com/in/geoffroy94/" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <aside class="rounded-3xl border border-white/10 bg-white/10 p-6 shadow-2xl shadow-black/20 backdrop-blur">
+        <h2 class="text-lg font-bold">Engineering focus</h2>
+        <ul class="mt-5 space-y-4 text-slate-200">
+          @for (highlight of profileHighlights; track highlight) {
+            <li class="flex gap-3">
+              <span class="mt-1 h-2 w-2 rounded-full bg-cyan-300"></span>
+              <span>{{ highlight }}</span>
+            </li>
+          }
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="border-b border-slate-200 bg-white py-8">
+    <div class="mx-auto flex max-w-6xl flex-wrap gap-3 px-5">
+      @for (skill of skills; track skill) {
+        <span class="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-semibold text-slate-700">{{ skill }}</span>
+      }
+    </div>
+  </section>
+
+  <app-projets></app-projets>
   <app-formations></app-formations>
-</section>
+</main>
+
+<app-footer></app-footer>

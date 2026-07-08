@@ -1,0 +1,14 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+::selection {
+  background: #4f46e5;
+  color: white;
+}

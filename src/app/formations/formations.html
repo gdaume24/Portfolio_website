@@ -1,52 +1,28 @@
-<section class="scroll-smooth focus:scroll-auto">
-    <div class="lg:w-4/5 ml-20 mt-20 mr-30">
-        <div class="w-full text-gray-600 body-font bg-indigo-500 mt-10">
-            <p class="text-white text-center text-3xl title-font font-medium">Formations</p>
-        </div>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
-        <p>ds</p>
+<section id="formations" class="bg-white py-20">
+  <div class="mx-auto max-w-6xl px-5">
+    <div class="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.3em] text-indigo-600">Training and growth</p>
+        <h2 class="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-5xl">A practical engineering foundation</h2>
+        <p class="mt-5 text-lg leading-8 text-slate-600">
+          My path combines structured professional training, applied AI work, and client-facing automation delivery. The common thread is simple: learn fast, build cleanly, and ship useful software.
+        </p>
+      </div>
+
+      <div class="space-y-5">
+        @for (formation of formations; track formation.title) {
+          <article class="rounded-3xl border border-slate-200 p-6 shadow-sm">
+            <p class="text-sm font-bold text-indigo-600">{{ formation.organization }}</p>
+            <h3 class="mt-2 text-xl font-black text-slate-950">{{ formation.title }}</h3>
+            <p class="mt-3 leading-7 text-slate-600">{{ formation.description }}</p>
+            <div class="mt-5 flex flex-wrap gap-2">
+              @for (skill of formation.skills; track skill) {
+                <span class="rounded-full bg-indigo-50 px-3 py-1 text-xs font-bold text-indigo-700">{{ skill }}</span>
+              }
+            </div>
+          </article>
+        }
+      </div>
     </div>
+  </div>
 </section>

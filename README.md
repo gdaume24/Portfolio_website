@@ -1,59 +1,58 @@
-# Portfolio
+# Geoffroy Daumer — Portfolio website
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
+Angular portfolio for presenting my full-stack engineering, AI automation, and deployment-minded product work.
 
-## Development server
+## Highlights
 
-To start a local development server, run:
+- Modern responsive landing page with curated project case studies
+- Portfolio positioning for Java/Spring Boot, Angular, Python, AI automation, and testing
+- SEO metadata for search/social previews
+- Downloadable CV from `public/files/CV.pdf`
+- GitHub Actions CI for production build, production dependency audit, and headless unit tests
+- Static build ready for GitHub Pages, Netlify, Vercel, or any CDN
 
-```bash
-ng serve
-```
+## Tech stack
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Angular 20
+- TypeScript
+- Tailwind CSS 4
+- npm
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Local development
 
 ```bash
-ng generate --help
+npm install
+npm start
 ```
 
-## Building
+Open `http://localhost:4200/`.
 
-To build the project run:
+## Production build
 
 ```bash
-ng build
+npm run build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+The static output is generated in `dist/portfolio/browser/`.
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## CI tests
 
 ```bash
-ng test
+npm run test:ci
 ```
 
-## Running end-to-end tests
+The CI command uses a no-sandbox Chrome Headless launcher for Linux containers and VPS environments that run tests as root.
 
-For end-to-end (e2e) testing, run:
+## Deployment notes
+
+This app is a static Angular site. Good deployment targets:
+
+- GitHub Pages with the built `dist/portfolio/browser` folder
+- Netlify or Vercel with `npm run build` and publish directory `dist/portfolio/browser`
+- Any static web server or CDN
+
+If deploying under a GitHub Pages project path, build with the right base href, for example:
 
 ```bash
-ng e2e
+npx ng build --base-href /Portfolio_website/
 ```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
