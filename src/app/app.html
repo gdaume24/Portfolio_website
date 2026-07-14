@@ -8,6 +8,7 @@
     <nav class="flex flex-wrap items-center gap-4 text-sm font-medium text-slate-600" aria-label="Navigation principale">
       <a class="transition hover:text-indigo-600" href="#presentation">Profil</a>
       <a class="transition hover:text-indigo-600" href="#projets">Projets</a>
+      <a class="transition hover:text-indigo-600" href="#deployment">Déploiement</a>
       <a class="transition hover:text-indigo-600" href="#formations">Formation</a>
       <a class="transition hover:text-indigo-600" href="files/CV.pdf" target="_blank" download="Geoffroy_Daumer_CV.pdf">CV</a>
       <a class="rounded-full bg-slate-950 px-4 py-2 text-white shadow-sm transition hover:bg-indigo-700" href="mailto:geoffroy.daumer@outlook.fr">Contact</a>
@@ -25,18 +26,21 @@
     <div class="relative mx-auto grid max-w-6xl gap-12 px-5 py-24 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
       <div>
         <p class="mb-4 inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm text-indigo-100">
-          Full-stack engineer · AI automation · deployment-ready products
+          Full-stack engineer · AI applications · deployment-ready portfolio
         </p>
         <h1 class="max-w-4xl text-4xl font-black tracking-tight sm:text-6xl">
-          I build reliable web applications and AI-powered automations that turn ideas into shipped products.
+          I build web applications, AI prototypes and automation systems that can be tested, deployed and explained.
         </h1>
         <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-          Developer focused on Java/Spring Boot, Angular, Python, and automation. I combine clean architecture, pragmatic testing, and deployment discipline to deliver tools that solve concrete business problems.
+          Developer focused on Java/Spring Boot, Angular, Python and backend architecture. My portfolio is structured around usable demos, clear API documentation and honest case studies rather than a long list of unfinished repositories.
         </p>
 
         <div class="mt-8 flex flex-wrap gap-3">
           <a class="rounded-full bg-white px-6 py-3 font-semibold text-slate-950 shadow-xl shadow-black/20 transition hover:-translate-y-0.5 hover:bg-indigo-50" href="#projets">
             View featured work
+          </a>
+          <a class="rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:border-white/50" href="#deployment">
+            Deployment plan
           </a>
           <a class="rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:border-white/50" href="https://github.com/gdaume24" target="_blank" rel="noopener noreferrer">
             GitHub profile
@@ -70,6 +74,48 @@
   </section>
 
   <app-projets></app-projets>
+
+  <section id="deployment" class="bg-slate-950 py-20 text-white">
+    <div class="mx-auto max-w-6xl px-5">
+      <div class="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.3em] text-cyan-300">Deployment architecture</p>
+          <h2 class="mt-3 text-3xl font-black tracking-tight sm:text-5xl">A concrete path from GitHub repos to clickable demos</h2>
+          <p class="mt-5 text-lg leading-8 text-slate-300">
+            The goal is to keep this portfolio lightweight while making the best projects actually usable. Static pages go to a CDN; interactive apps get a frontend URL, an API URL, Swagger where useful, and reproducible local instructions in GitHub.
+          </p>
+        </div>
+
+        <div class="grid gap-5">
+          @for (track of deploymentTracks; track track.name) {
+            <article class="rounded-3xl border border-white/10 bg-white/10 p-6 shadow-xl shadow-black/10">
+              <p class="text-sm font-bold text-cyan-300">{{ track.purpose }}</p>
+              <h3 class="mt-2 text-xl font-black">{{ track.name }}</h3>
+              <p class="mt-3 text-slate-300">{{ track.target }}</p>
+              <ul class="mt-4 space-y-2 text-sm leading-6 text-slate-300">
+                @for (note of track.notes; track note) {
+                  <li class="flex gap-3">
+                    <span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-cyan-300"></span>
+                    <span>{{ note }}</span>
+                  </li>
+                }
+              </ul>
+            </article>
+          }
+        </div>
+      </div>
+
+      <div class="mt-12 grid gap-5 md:grid-cols-4">
+        @for (step of roadmap; track step.title) {
+          <article class="rounded-3xl border border-white/10 bg-white/[0.06] p-5">
+            <h3 class="font-black text-white">{{ step.title }}</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-300">{{ step.description }}</p>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
   <app-formations></app-formations>
 </main>
 

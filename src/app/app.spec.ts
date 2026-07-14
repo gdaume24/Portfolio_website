@@ -22,7 +22,7 @@ describe('App', () => {
 
     const compiled = fixture.nativeElement as HTMLElement;
 
-    expect(compiled.querySelector('h1')?.textContent).toContain('I build reliable web applications');
+    expect(compiled.querySelector('h1')?.textContent).toContain('I build web applications, AI prototypes and automation systems');
     expect(compiled.textContent).toContain('Geoffroy Daumer');
   });
 });
