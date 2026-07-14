@@ -2,13 +2,12 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  min-width: 320px;
-  background: #f8fafc;
-  color: #0f172a;
+:host {
+  display: block;
+  background: #0b1324;
 }
 
 ::selection {
-  background: #4f46e5;
+  background: #f97316;
   color: white;
 }

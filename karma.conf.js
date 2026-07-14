@@ -1,3 +1,9 @@
+const fs = require('fs');
+
+if (!process.env.CHROME_BIN && fs.existsSync('/usr/bin/chromium')) {
+  process.env.CHROME_BIN = '/usr/bin/chromium';
+}
+
 module.exports = function (config) {
   config.set({
     basePath: '',

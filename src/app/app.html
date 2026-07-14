@@ -1,169 +1,218 @@
-<header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/90 backdrop-blur">
-  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-4">
-    <a href="#top-page" class="flex items-center gap-3 font-semibold text-slate-950" aria-label="Retour en haut de page">
-      <span class="grid h-10 w-10 place-items-center rounded-2xl bg-indigo-600 text-white shadow-lg shadow-indigo-600/20">GD</span>
-      <span>Geoffroy Daumer</span>
+<header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0b1324]/85 text-white backdrop-blur-xl">
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4">
+    <a href="#top-page" class="text-xl font-black tracking-tight" aria-label="Retour en haut de page">
+      Geoffroy<span class="text-orange-500">.</span>
     </a>
 
-    <nav class="flex flex-wrap items-center gap-4 text-sm font-medium text-slate-600" aria-label="Navigation principale">
-      <a class="transition hover:text-indigo-600" href="#presentation">Profil</a>
-      <a class="transition hover:text-indigo-600" href="#projets">Projets</a>
-      <a class="transition hover:text-indigo-600" href="#deployment">Déploiement</a>
-      <a class="transition hover:text-indigo-600" href="#services-express">Services express</a>
-      <a class="transition hover:text-indigo-600" href="#formations">Formation</a>
-      <a class="transition hover:text-indigo-600" href="files/CV.pdf" target="_blank" download="Geoffroy_Daumer_CV.pdf">CV</a>
-      <a class="rounded-full bg-slate-950 px-4 py-2 text-white shadow-sm transition hover:bg-indigo-700" href="mailto:geoffroy.daumer@outlook.fr">Contact</a>
+    <nav class="hidden items-center gap-7 text-sm font-semibold text-slate-300 md:flex" aria-label="Navigation principale">
+      <a class="text-orange-400" href="#top-page">Home</a>
+      <a class="transition hover:text-orange-400" href="#about">About</a>
+      <a class="transition hover:text-orange-400" href="#skills">Skills</a>
+      <a class="transition hover:text-orange-400" href="#projets">Projects</a>
+      <a class="transition hover:text-orange-400" href="#contact">Contact</a>
     </nav>
+
+    <a class="rounded-lg border border-orange-500 px-4 py-2 text-sm font-bold text-orange-400 shadow-lg shadow-orange-500/10 transition hover:bg-orange-500 hover:text-white" href="files/CV.pdf" target="_blank" download="Geoffroy_Daumer_CV.pdf">
+      Download CV
+    </a>
   </div>
 </header>
 
-<main id="top-page">
-  <section id="presentation" class="relative overflow-hidden bg-slate-950 text-white">
-    <div class="absolute inset-0 opacity-30" aria-hidden="true">
-      <div class="absolute left-10 top-20 h-72 w-72 rounded-full bg-indigo-500 blur-3xl"></div>
-      <div class="absolute bottom-0 right-16 h-80 w-80 rounded-full bg-cyan-400 blur-3xl"></div>
-    </div>
+<main id="top-page" class="min-h-screen overflow-hidden bg-[#0b1324] text-white">
+  <section class="relative border-b border-white/10 pt-28">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_18%_24%,rgba(255,114,0,0.24),transparent_34%),radial-gradient(circle_at_84%_18%,rgba(28,115,255,0.22),transparent_30%)]" aria-hidden="true"></div>
+    <div class="absolute inset-0 opacity-30 [background-image:radial-gradient(rgba(255,255,255,0.18)_1px,transparent_1px)] [background-size:24px_24px]" aria-hidden="true"></div>
 
-    <div class="relative mx-auto grid max-w-6xl gap-12 px-5 py-24 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+    <div class="relative mx-auto grid max-w-7xl gap-14 px-5 py-24 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-32">
       <div>
-        <p class="mb-4 inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm text-indigo-100">
-          Full-stack engineer · AI applications · deployment-ready portfolio
-        </p>
-        <h1 class="max-w-4xl text-4xl font-black tracking-tight sm:text-6xl">
-          I build web applications, AI prototypes and automation systems that can be tested, deployed and explained.
+        <p class="mb-3 text-sm font-black uppercase tracking-[0.28em] text-slate-400">Hi, I am</p>
+        <h1 class="text-4xl font-black tracking-tight sm:text-6xl">
+          <span class="bg-gradient-to-r from-orange-400 via-orange-500 to-rose-400 bg-clip-text text-transparent">Geoffroy Daumer</span>
+          <span class="mt-3 block text-3xl uppercase text-white sm:text-5xl">Full-stack developer</span>
         </h1>
-        <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-          Developer focused on Java/Spring Boot, Angular, Python and backend architecture. My portfolio is structured around usable demos, clear API documentation and honest case studies rather than a long list of unfinished repositories.
+        <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-300">
+          I build clean web applications, API backends, AI prototypes and automation tools. My portfolio focuses on projects that can be reviewed, tested, deployed and explained clearly.
         </p>
 
-        <div class="mt-8 flex flex-wrap gap-3">
-          <a class="rounded-full bg-white px-6 py-3 font-semibold text-slate-950 shadow-xl shadow-black/20 transition hover:-translate-y-0.5 hover:bg-indigo-50" href="#projets">
-            View featured work
+        <div class="mt-10 grid max-w-xl grid-cols-3 divide-x divide-white/10 rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+          @for (stat of stats; track stat.label) {
+            <div class="px-3 text-center first:pl-0 last:pr-0">
+              <p class="text-3xl font-black text-orange-400">{{ stat.value }}</p>
+              <p class="mt-1 text-xs font-semibold text-slate-400">{{ stat.label }}</p>
+            </div>
+          }
+        </div>
+
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a class="rounded-lg bg-orange-500 px-7 py-3 font-black text-white shadow-xl shadow-orange-500/25 transition hover:-translate-y-0.5 hover:bg-orange-400" href="#projets">
+            View My Work
           </a>
-          <a class="rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:border-white/50" href="#deployment">
-            Deployment plan
+          <a class="rounded-lg border border-white/25 px-7 py-3 font-black text-white transition hover:-translate-y-0.5 hover:border-orange-400 hover:text-orange-300" href="#contact">
+            Get in Touch
           </a>
-          <a class="rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:border-white/50" href="https://github.com/gdaume24" target="_blank" rel="noopener noreferrer">
-            GitHub profile
+          <a class="rounded-lg border border-emerald-400/60 bg-emerald-400/10 px-7 py-3 font-black text-emerald-200 transition hover:-translate-y-0.5 hover:bg-emerald-400 hover:text-emerald-950" href="radar-b2b/">
+            Radar B2B · 1 €
           </a>
-          <a class="rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:border-white/50" href="https://www.linkedin.com/in/geoffroy94/" target="_blank" rel="noopener noreferrer">
-            LinkedIn
-          </a>
+        </div>
+
+        <div class="mt-10 flex gap-4 text-slate-400" aria-label="Liens sociaux">
+          <a class="grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/[0.03] transition hover:border-orange-400 hover:text-orange-400" href="https://www.linkedin.com/in/geoffroy94/" target="_blank" rel="noopener noreferrer">in</a>
+          <a class="grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/[0.03] transition hover:border-orange-400 hover:text-orange-400" href="https://github.com/gdaume24" target="_blank" rel="noopener noreferrer">gh</a>
+          <a class="grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/[0.03] transition hover:border-orange-400 hover:text-orange-400" href="mailto:geoffroy.daumer@outlook.fr">@</a>
         </div>
       </div>
 
-      <aside class="rounded-3xl border border-white/10 bg-white/10 p-6 shadow-2xl shadow-black/20 backdrop-blur">
-        <h2 class="text-lg font-bold">Engineering focus</h2>
-        <ul class="mt-5 space-y-4 text-slate-200">
-          @for (highlight of profileHighlights; track highlight) {
-            <li class="flex gap-3">
-              <span class="mt-1 h-2 w-2 rounded-full bg-cyan-300"></span>
-              <span>{{ highlight }}</span>
-            </li>
-          }
-        </ul>
+      <aside class="relative mx-auto w-full max-w-md lg:max-w-lg" aria-label="Portfolio command card">
+        <div class="absolute -inset-6 rounded-[2rem] bg-orange-500/20 blur-3xl" aria-hidden="true"></div>
+        <div class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.06] p-5 shadow-2xl shadow-black/30">
+          <div class="rounded-[1.5rem] border border-white/10 bg-[#121d32]/95 p-5">
+            <div class="mb-5 flex items-center gap-2" aria-hidden="true">
+              <span class="h-3 w-3 rounded-full bg-red-400"></span>
+              <span class="h-3 w-3 rounded-full bg-amber-300"></span>
+              <span class="h-3 w-3 rounded-full bg-emerald-400"></span>
+            </div>
+            <p class="font-mono text-xs uppercase tracking-[0.22em] text-orange-300">portfolio system</p>
+            <h2 class="mt-3 text-2xl font-black tracking-tight text-white">Proof-first software builder</h2>
+            <div class="mt-6 grid gap-3">
+              <div class="rounded-2xl border border-white/10 bg-[#0b1324]/80 p-4">
+                <p class="font-mono text-sm text-slate-300"><span class="text-orange-300">$</span> build --portfolio --demo-ready</p>
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+                  <p class="text-2xl font-black text-orange-400">API</p>
+                  <p class="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">FastAPI · Spring</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+                  <p class="text-2xl font-black text-orange-400">UI</p>
+                  <p class="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Angular · Tailwind</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-5 rounded-2xl border border-white/10 bg-[#0b1324]/80 p-5">
+            <p class="font-mono text-xs text-orange-300">bash — geoffroy&#64;portfolio</p>
+            <p class="mt-2 font-mono text-sm leading-6 text-slate-300">$ ship useful software --with-tests --with-demo</p>
+          </div>
+        </div>
       </aside>
     </div>
   </section>
 
-  <section class="border-b border-slate-200 bg-white py-8">
-    <div class="mx-auto flex max-w-6xl flex-wrap gap-3 px-5">
-      @for (skill of skills; track skill) {
-        <span class="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-semibold text-slate-700">{{ skill }}</span>
-      }
-    </div>
-  </section>
-
-  <app-projets></app-projets>
-
-  <section id="deployment" class="bg-slate-950 py-20 text-white">
-    <div class="mx-auto max-w-6xl px-5">
-      <div class="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-        <div>
-          <p class="text-sm font-bold uppercase tracking-[0.3em] text-cyan-300">Deployment architecture</p>
-          <h2 class="mt-3 text-3xl font-black tracking-tight sm:text-5xl">A concrete path from GitHub repos to clickable demos</h2>
-          <p class="mt-5 text-lg leading-8 text-slate-300">
-            The goal is to keep this portfolio lightweight while making the best projects actually usable. Static pages go to a CDN; interactive apps get a frontend URL, an API URL, Swagger where useful, and reproducible local instructions in GitHub.
-          </p>
-        </div>
-
-        <div class="grid gap-5">
-          @for (track of deploymentTracks; track track.name) {
-            <article class="rounded-3xl border border-white/10 bg-white/10 p-6 shadow-xl shadow-black/10">
-              <p class="text-sm font-bold text-cyan-300">{{ track.purpose }}</p>
-              <h3 class="mt-2 text-xl font-black">{{ track.name }}</h3>
-              <p class="mt-3 text-slate-300">{{ track.target }}</p>
-              <ul class="mt-4 space-y-2 text-sm leading-6 text-slate-300">
-                @for (note of track.notes; track note) {
-                  <li class="flex gap-3">
-                    <span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-cyan-300"></span>
-                    <span>{{ note }}</span>
-                  </li>
-                }
-              </ul>
-            </article>
-          }
-        </div>
+  <section id="about" class="border-b border-white/10 py-24 lg:py-28">
+    <div class="mx-auto grid max-w-7xl gap-12 px-5 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+      <div>
+        <p class="text-sm font-black uppercase tracking-[0.28em] text-orange-400">About me</p>
+        <h2 class="mt-3 text-3xl font-black tracking-tight sm:text-5xl">A practical builder for web, API and AI products.</h2>
+        <p class="mt-5 text-lg leading-8 text-slate-300">
+          I like portfolios that show proof: a usable UI, a documented API, tests, deployment commands and a clear explanation of the trade-offs. This site is designed as a recruiter-friendly launchpad for my strongest work.
+        </p>
       </div>
 
-      <div class="mt-12 grid gap-5 md:grid-cols-4">
-        @for (step of roadmap; track step.title) {
-          <article class="rounded-3xl border border-white/10 bg-white/[0.06] p-5">
-            <h3 class="font-black text-white">{{ step.title }}</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-300">{{ step.description }}</p>
+      <div class="grid gap-4 sm:grid-cols-2">
+        @for (card of approachCards; track card.title) {
+          <article class="rounded-2xl border border-white/10 bg-white/[0.04] p-7 shadow-xl shadow-black/10 transition hover:-translate-y-1 hover:border-orange-500/40">
+            <div class="grid h-11 w-11 place-items-center rounded-xl bg-orange-500/10 text-xl text-orange-400">{{ card.icon }}</div>
+            <h3 class="mt-5 text-xl font-black">{{ card.title }}</h3>
+            <p class="mt-3 leading-7 text-slate-400">{{ card.description }}</p>
           </article>
         }
       </div>
     </div>
   </section>
 
-  <section id="services-express" class="bg-white py-20">
-    <div class="mx-auto grid max-w-6xl gap-8 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-      <div>
-        <p class="text-sm font-bold uppercase tracking-[0.3em] text-indigo-600">Services express</p>
-        <h2 class="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-5xl">Un blocage technique ou un profil à améliorer ?</h2>
-        <p class="mt-5 text-lg leading-8 text-slate-600">
-          J’aide rapidement sur des problèmes ciblés : portfolio, GitHub, Netlify, README, CV, LinkedIn, bug simple Angular/Java/Python ou clarification d’erreur. Le format est court, concret et orienté résultat.
-        </p>
-        <div class="mt-8 flex flex-wrap gap-3">
-          <a class="rounded-full bg-indigo-600 px-6 py-3 font-semibold text-white shadow-lg shadow-indigo-600/20 transition hover:-translate-y-0.5 hover:bg-indigo-700" href="mailto:geoffroy.daumer@outlook.fr?subject=D%C3%A9pannage%20express%2010%E2%82%AC&body=Bonjour%20Geoffroy%2C%0A%0AJ%27ai%20besoin%20d%27un%20d%C3%A9pannage%20express%20sur%20%3A%0A%0AD%C3%A9tail%20du%20probl%C3%A8me%20%3A%0A%0AMerci%20%21">
-            Demander un dépannage express
-          </a>
-          <a class="rounded-full border border-slate-300 px-6 py-3 font-semibold text-slate-700 transition hover:-translate-y-0.5 hover:border-indigo-300 hover:text-indigo-700" href="mailto:geoffroy.daumer@outlook.fr">
-            Me contacter
-          </a>
-          <a class="rounded-full border border-emerald-300 px-6 py-3 font-semibold text-emerald-700 transition hover:-translate-y-0.5 hover:border-emerald-500 hover:text-emerald-800" href="radar-b2b/">
-            Voir le pack Radar B2B à 1 €
-          </a>
-        </div>
+  <section id="skills" class="border-b border-white/10 py-24 lg:py-28">
+    <div class="mx-auto max-w-7xl px-5 sm:px-6">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-black uppercase tracking-[0.28em] text-orange-400">My skills</p>
+        <h2 class="mt-3 text-3xl font-black tracking-tight sm:text-5xl">Technologies I use to ship complete demos.</h2>
+        <p class="mt-5 text-lg leading-8 text-slate-400">From typed frontends to Spring/.NET backends, ML APIs and deployment workflows.</p>
       </div>
 
-      <div class="grid gap-4 sm:grid-cols-2">
-        <article class="rounded-3xl border border-slate-200 bg-slate-50 p-6">
-          <h3 class="font-black text-slate-950">Audit CV / LinkedIn</h3>
-          <p class="mt-3 text-sm leading-6 text-slate-600">Retour concret avec corrections prioritaires, formulation plus professionnelle et points à clarifier.</p>
-          <p class="mt-5 text-lg font-black text-indigo-600">à partir de 10 €</p>
-        </article>
-        <article class="rounded-3xl border border-slate-200 bg-slate-50 p-6">
-          <h3 class="font-black text-slate-950">GitHub / README</h3>
-          <p class="mt-3 text-sm leading-6 text-slate-600">Amélioration rapide d’un README, d’une présentation de projet ou d’un portfolio étudiant.</p>
-          <p class="mt-5 text-lg font-black text-indigo-600">à partir de 10 €</p>
-        </article>
-        <article class="rounded-3xl border border-slate-200 bg-slate-50 p-6">
-          <h3 class="font-black text-slate-950">Netlify / déploiement</h3>
-          <p class="mt-3 text-sm leading-6 text-slate-600">Diagnostic d’un déploiement bloqué : build command, publish directory, logs et correction ciblée.</p>
-          <p class="mt-5 text-lg font-black text-indigo-600">à partir de 10 €</p>
-        </article>
-        <article class="rounded-3xl border border-slate-200 bg-slate-50 p-6">
-          <h3 class="font-black text-slate-950">Bug simple</h3>
-          <p class="mt-3 text-sm leading-6 text-slate-600">Lecture d’erreur, explication claire et plan d’action sur Angular, Java, Python ou Git.</p>
-          <p class="mt-5 text-lg font-black text-indigo-600">à partir de 10 €</p>
-        </article>
+      <div class="mt-12 flex flex-wrap justify-center gap-3">
+        <span class="rounded-full bg-orange-500 px-4 py-2 text-sm font-black text-white shadow-lg shadow-orange-500/20">All</span>
+        @for (group of skillGroups; track group.category) {
+          <span class="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm font-semibold text-slate-300">{{ group.category }}</span>
+        }
+      </div>
+
+      <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        @for (group of skillGroups; track group.category) {
+          <article class="rounded-2xl border border-white/10 bg-[#111c31] p-7">
+            <h3 class="text-sm font-black uppercase tracking-[0.2em] text-orange-300">{{ group.category }}</h3>
+            <div class="mt-5 flex flex-wrap gap-2">
+              @for (skill of group.skills; track skill) {
+                <span class="rounded-full bg-white/[0.06] px-3 py-1.5 text-sm font-semibold text-slate-300">{{ skill }}</span>
+              }
+            </div>
+          </article>
+        }
       </div>
     </div>
   </section>
 
+  <app-projets></app-projets>
   <app-formations></app-formations>
+
+  <section id="radar-b2b" class="border-b border-white/10 bg-[#0b1324] py-24 lg:py-28">
+    <div class="mx-auto max-w-7xl px-5 sm:px-6">
+      <div class="rounded-[2rem] border border-emerald-400/20 bg-gradient-to-br from-emerald-400/10 via-white/[0.04] to-orange-500/10 p-8 shadow-2xl shadow-black/20 lg:p-10">
+        <p class="text-sm font-black uppercase tracking-[0.28em] text-emerald-300">Micro-produit test</p>
+        <div class="mt-4 grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+          <div>
+            <h2 class="text-3xl font-black tracking-tight text-white sm:text-5xl">Radar B2B consultants AO IT</h2>
+            <p class="mt-5 max-w-3xl text-lg leading-8 text-slate-300">
+              Un pack test à 1 € : shortlist BOAMP IT/IA, CSV de signaux qualifiés et page de démo pour évaluer un radar de comptes chauds B2B.
+            </p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-[#0b1324]/80 p-5">
+            <p class="text-sm font-semibold text-slate-400">Paiement via checkout externe configuré par Geoffroy.</p>
+            <a class="mt-5 inline-flex w-full justify-center rounded-xl bg-emerald-400 px-6 py-3 font-black text-emerald-950 shadow-xl shadow-emerald-400/20 transition hover:-translate-y-0.5 hover:bg-emerald-300" href="radar-b2b/">
+              Voir le pack à 1 €
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="border-y border-white/10 py-24 lg:py-28">
+    <div class="mx-auto max-w-7xl px-5 sm:px-6">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="text-3xl font-black tracking-tight text-rose-300 sm:text-5xl">Get in Touch</h2>
+        <p class="mt-4 text-slate-400">A project, role, technical review or portfolio question? My inbox is open.</p>
+      </div>
+
+      <div class="mt-14 grid gap-8 lg:grid-cols-2">
+        <form class="rounded-2xl border border-white/10 bg-[#111c31] p-7" action="mailto:geoffroy.daumer@outlook.fr" method="post" enctype="text/plain">
+          <label class="sr-only" for="name">Your name</label>
+          <input id="name" name="name" class="w-full rounded-xl border border-white/10 bg-[#17233a] px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-orange-400" placeholder="Your Name">
+          <label class="sr-only" for="email">Your email</label>
+          <input id="email" name="email" type="email" class="mt-4 w-full rounded-xl border border-white/10 bg-[#17233a] px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-orange-400" placeholder="Your Email">
+          <label class="sr-only" for="message">Your message</label>
+          <textarea id="message" name="message" rows="5" class="mt-4 w-full resize-none rounded-xl border border-white/10 bg-[#17233a] px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-orange-400" placeholder="Your Message"></textarea>
+          <button class="mt-5 w-full rounded-xl bg-orange-500 px-6 py-3 font-black text-white shadow-xl shadow-orange-500/20 transition hover:bg-orange-400" type="submit">Send Message</button>
+        </form>
+
+        <aside class="rounded-2xl border border-white/10 bg-[#111c31] p-7">
+          <h3 class="text-xl font-black">Let’s connect</h3>
+          <p class="mt-4 leading-7 text-slate-400">I am open to full-stack, backend/API, AI application and automation opportunities. I usually respond within 24 hours.</p>
+          <div class="mt-6 space-y-3 text-sm text-slate-300">
+            <p>▸ Available for software roles and focused freelance help</p>
+            <p>▸ Based in France · remote-friendly</p>
+            <p>▸ English/French professional communication</p>
+          </div>
+          <div class="mt-8 border-t border-white/10 pt-6">
+            <p class="text-xs uppercase tracking-[0.2em] text-slate-500">Email</p>
+            <a class="mt-2 inline-flex text-orange-300 transition hover:text-orange-200" href="mailto:geoffroy.daumer@outlook.fr">geoffroy.daumer&#64;outlook.fr</a>
+          </div>
+          <div class="mt-6 flex gap-4 text-slate-400">
+            <a class="transition hover:text-orange-400" href="https://www.linkedin.com/in/geoffroy94/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="transition hover:text-orange-400" href="https://github.com/gdaume24" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
 </main>
 
 <app-footer></app-footer>
