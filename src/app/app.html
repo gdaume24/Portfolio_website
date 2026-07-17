@@ -12,7 +12,7 @@
       <a class="transition hover:text-orange-400" href="#contact">Contact</a>
     </nav>
 
-    <a class="rounded-lg border border-orange-500 px-4 py-2 text-sm font-bold text-orange-400 shadow-lg shadow-orange-500/10 transition hover:bg-orange-500 hover:text-white" href="files/CV.pdf" target="_blank" download="Geoffroy_Daumer_CV.pdf">
+    <a class="rounded-lg border border-orange-500 px-4 py-2 text-sm font-bold text-orange-400 shadow-lg shadow-orange-500/10 transition hover:bg-orange-500 hover:text-white" href="files/CV-EN.pdf" target="_blank" download="Geoffroy_Daumer_CV.pdf">
       Download CV
     </a>
   </div>
@@ -31,7 +31,7 @@
           <span class="mt-3 block text-3xl uppercase text-white sm:text-5xl">Full-stack developer</span>
         </h1>
         <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-300">
-          I build clean web applications, API backends, AI prototypes and automation tools. My portfolio focuses on projects that can be reviewed, tested, deployed and explained clearly.
+          I build full-stack applications, API backends, AI prototypes and automation tools with a proof-first mindset: readable code, clear run commands, tests and demos a recruiter can actually verify.
         </p>
 
         <div class="mt-10 grid max-w-xl grid-cols-3 divide-x divide-white/10 rounded-2xl border border-white/10 bg-white/[0.03] p-5">
@@ -49,9 +49,6 @@
           </a>
           <a class="rounded-lg border border-white/25 px-7 py-3 font-black text-white transition hover:-translate-y-0.5 hover:border-orange-400 hover:text-orange-300" href="#contact">
             Get in Touch
-          </a>
-          <a class="rounded-lg border border-emerald-400/60 bg-emerald-400/10 px-7 py-3 font-black text-emerald-200 transition hover:-translate-y-0.5 hover:bg-emerald-400 hover:text-emerald-950" href="radar-b2b/">
-            Radar B2B · 1 €
           </a>
         </div>
 
@@ -75,17 +72,20 @@
             <h2 class="mt-3 text-2xl font-black tracking-tight text-white">Proof-first software builder</h2>
             <div class="mt-6 grid gap-3">
               <div class="rounded-2xl border border-white/10 bg-[#0b1324]/80 p-4">
-                <p class="font-mono text-sm text-slate-300"><span class="text-orange-300">$</span> build --portfolio --demo-ready</p>
+                <p class="font-mono text-sm text-slate-300"><span class="text-orange-300">$</span> npm run build && npm run test:ci</p>
               </div>
               <div class="grid grid-cols-2 gap-3">
                 <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
                   <p class="text-2xl font-black text-orange-400">API</p>
-                  <p class="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">FastAPI · Spring</p>
+                  <p class="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Spring · FastAPI · .NET</p>
                 </div>
                 <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
                   <p class="text-2xl font-black text-orange-400">UI</p>
                   <p class="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Angular · Tailwind</p>
                 </div>
+              </div>
+              <div class="rounded-2xl border border-orange-500/20 bg-orange-500/10 p-4">
+                <p class="text-sm font-bold text-orange-100">Focus: junior full-stack roles, backend/API work and pragmatic AI/automation projects.</p>
               </div>
             </div>
           </div>
@@ -153,28 +153,6 @@
   <app-projets></app-projets>
   <app-formations></app-formations>
 
-  <section id="radar-b2b" class="border-b border-white/10 bg-[#0b1324] py-24 lg:py-28">
-    <div class="mx-auto max-w-7xl px-5 sm:px-6">
-      <div class="rounded-[2rem] border border-emerald-400/20 bg-gradient-to-br from-emerald-400/10 via-white/[0.04] to-orange-500/10 p-8 shadow-2xl shadow-black/20 lg:p-10">
-        <p class="text-sm font-black uppercase tracking-[0.28em] text-emerald-300">Micro-produit test</p>
-        <div class="mt-4 grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
-          <div>
-            <h2 class="text-3xl font-black tracking-tight text-white sm:text-5xl">Radar B2B consultants AO IT</h2>
-            <p class="mt-5 max-w-3xl text-lg leading-8 text-slate-300">
-              Un pack test à 1 € : shortlist BOAMP IT/IA, CSV de signaux qualifiés et page de démo pour évaluer un radar de comptes chauds B2B.
-            </p>
-          </div>
-          <div class="rounded-2xl border border-white/10 bg-[#0b1324]/80 p-5">
-            <p class="text-sm font-semibold text-slate-400">Paiement via checkout externe configuré par Geoffroy.</p>
-            <a class="mt-5 inline-flex w-full justify-center rounded-xl bg-emerald-400 px-6 py-3 font-black text-emerald-950 shadow-xl shadow-emerald-400/20 transition hover:-translate-y-0.5 hover:bg-emerald-300" href="radar-b2b/">
-              Voir le pack à 1 €
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section id="contact" class="border-y border-white/10 py-24 lg:py-28">
     <div class="mx-auto max-w-7xl px-5 sm:px-6">
       <div class="mx-auto max-w-3xl text-center">
@@ -182,34 +160,27 @@
         <p class="mt-4 text-slate-400">A project, role, technical review or portfolio question? My inbox is open.</p>
       </div>
 
-      <div class="mt-14 grid gap-8 lg:grid-cols-2">
-        <form class="rounded-2xl border border-white/10 bg-[#111c31] p-7" action="mailto:geoffroy.daumer@outlook.fr" method="post" enctype="text/plain">
-          <label class="sr-only" for="name">Your name</label>
-          <input id="name" name="name" class="w-full rounded-xl border border-white/10 bg-[#17233a] px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-orange-400" placeholder="Your Name">
-          <label class="sr-only" for="email">Your email</label>
-          <input id="email" name="email" type="email" class="mt-4 w-full rounded-xl border border-white/10 bg-[#17233a] px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-orange-400" placeholder="Your Email">
-          <label class="sr-only" for="message">Your message</label>
-          <textarea id="message" name="message" rows="5" class="mt-4 w-full resize-none rounded-xl border border-white/10 bg-[#17233a] px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-orange-400" placeholder="Your Message"></textarea>
-          <button class="mt-5 w-full rounded-xl bg-orange-500 px-6 py-3 font-black text-white shadow-xl shadow-orange-500/20 transition hover:bg-orange-400" type="submit">Send Message</button>
-        </form>
+      <div class="mt-14 grid gap-6 md:grid-cols-3">
+        <a class="group rounded-3xl border border-white/10 bg-[#111c31] p-7 shadow-2xl shadow-black/10 transition hover:-translate-y-1 hover:border-orange-500/50" href="mailto:geoffroy.daumer@outlook.fr">
+          <p class="text-sm font-black uppercase tracking-[0.22em] text-orange-300">Email</p>
+          <h3 class="mt-4 text-2xl font-black">Start a conversation</h3>
+          <p class="mt-4 leading-7 text-slate-400">Software roles, backend/API work, AI application prototypes or focused automation projects.</p>
+          <span class="mt-6 inline-flex font-black text-orange-300 group-hover:text-orange-200">geoffroy.daumer&#64;outlook.fr →</span>
+        </a>
 
-        <aside class="rounded-2xl border border-white/10 bg-[#111c31] p-7">
-          <h3 class="text-xl font-black">Let’s connect</h3>
-          <p class="mt-4 leading-7 text-slate-400">I am open to full-stack, backend/API, AI application and automation opportunities. I usually respond within 24 hours.</p>
-          <div class="mt-6 space-y-3 text-sm text-slate-300">
-            <p>▸ Available for software roles and focused freelance help</p>
-            <p>▸ Based in France · remote-friendly</p>
-            <p>▸ English/French professional communication</p>
-          </div>
-          <div class="mt-8 border-t border-white/10 pt-6">
-            <p class="text-xs uppercase tracking-[0.2em] text-slate-500">Email</p>
-            <a class="mt-2 inline-flex text-orange-300 transition hover:text-orange-200" href="mailto:geoffroy.daumer@outlook.fr">geoffroy.daumer&#64;outlook.fr</a>
-          </div>
-          <div class="mt-6 flex gap-4 text-slate-400">
-            <a class="transition hover:text-orange-400" href="https://www.linkedin.com/in/geoffroy94/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a class="transition hover:text-orange-400" href="https://github.com/gdaume24" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </div>
-        </aside>
+        <a class="group rounded-3xl border border-white/10 bg-[#111c31] p-7 shadow-2xl shadow-black/10 transition hover:-translate-y-1 hover:border-orange-500/50" href="https://github.com/gdaume24" target="_blank" rel="noopener noreferrer">
+          <p class="text-sm font-black uppercase tracking-[0.22em] text-orange-300">GitHub</p>
+          <h3 class="mt-4 text-2xl font-black">Review the code</h3>
+          <p class="mt-4 leading-7 text-slate-400">Curated repositories with API, web, testing and automation projects.</p>
+          <span class="mt-6 inline-flex font-black text-orange-300 group-hover:text-orange-200">github.com/gdaume24 →</span>
+        </a>
+
+        <a class="group rounded-3xl border border-white/10 bg-[#111c31] p-7 shadow-2xl shadow-black/10 transition hover:-translate-y-1 hover:border-orange-500/50" href="files/CV-EN.pdf" target="_blank" download="Geoffroy_Daumer_CV.pdf">
+          <p class="text-sm font-black uppercase tracking-[0.22em] text-orange-300">CV</p>
+          <h3 class="mt-4 text-2xl font-black">Download resume</h3>
+          <p class="mt-4 leading-7 text-slate-400">A recruiter-friendly PDF to pair with the project cards and repositories.</p>
+          <span class="mt-6 inline-flex font-black text-orange-300 group-hover:text-orange-200">Download PDF →</span>
+        </a>
       </div>
     </div>
   </section>

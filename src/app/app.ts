@@ -27,31 +27,31 @@ interface SkillGroup {
 })
 export class App {
   protected readonly stats: Stat[] = [
-    { value: '6+', label: 'Projets solides' },
-    { value: '3', label: 'Stacks back/front' },
-    { value: '100%', label: 'Orienté démo' }
+    { value: '6+', label: 'Curated projects' },
+    { value: '3', label: 'Core stacks' },
+    { value: '100%', label: 'Demo-focused' }
   ];
 
   protected readonly approachCards: ApproachCard[] = [
     {
       icon: '✦',
-      title: 'Interfaces nettes',
-      description: 'Des pages lisibles, responsives, rapides à comprendre et agréables à parcourir.'
+      title: 'Clean interfaces',
+      description: 'Readable, responsive pages that make the product and user journey easy to understand.'
     },
     {
       icon: '⚡',
-      title: 'Backends utiles',
-      description: 'APIs REST, authentification, persistance SQL, Swagger et logique métier structurée.'
+      title: 'Useful backends',
+      description: 'REST APIs, authentication, SQL persistence, Swagger docs and structured business logic.'
     },
     {
       icon: '⌁',
-      title: 'IA pragmatique',
-      description: 'Prototypes Python, FastAPI, Streamlit et automatisations qui restent expliquables.'
+      title: 'Pragmatic AI',
+      description: 'Python, FastAPI, Streamlit and automation prototypes presented with clear limits.'
     },
     {
       icon: '✓',
-      title: 'Livraison vérifiable',
-      description: 'Tests, README, CI, commandes de lancement et chemins de déploiement concrets.'
+      title: 'Verifiable delivery',
+      description: 'Tests, README files, CI commands, launch steps and concrete deployment paths.'
     }
   ];
 
